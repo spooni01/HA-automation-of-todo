@@ -1,0 +1,10 @@
+{
+    "version": "2.0",
+    "domain": "todo",
+    "name": "To-do list",
+    "codeowners": ["@home-assistant/core", "@spooni01"],
+    "dependencies": ["http"],
+    "documentation": "https://www.home-assistant.io/integrations/todo",
+    "integration_type": "entity",
+    "quality_scale": "internal"
+  }
