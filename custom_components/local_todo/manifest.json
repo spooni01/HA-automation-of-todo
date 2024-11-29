@@ -1,5 +1,5 @@
 {
-    "version": "2.0",
+    "version": "1.9.0",
     "domain": "local_todo",
     "name": "Local To-do",
     "codeowners": ["@allenporter", "@spooni01"],
@@ -7,5 +7,6 @@
     "dependencies": [],
     "documentation": "https://www.home-assistant.io/integrations/local_todo/",
     "iot_class": "local_polling",
+    "panel_custom": true,
     "requirements": ["ical==8.2.0"]
 }

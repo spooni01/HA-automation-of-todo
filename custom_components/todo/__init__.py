@@ -8,7 +8,7 @@ import datetime
 import logging
 from typing import Any, final
 
-from propcache import cached_property
+#from propcache import cached_property
 import voluptuous as vol
 
 from homeassistant.components import frontend, websocket_api
@@ -252,7 +252,7 @@ class TodoListEntity(Entity, cached_properties=CACHED_PROPERTIES_WITH_ATTR_):
             return None
         return sum([item.status == TodoItemStatus.NEEDS_ACTION for item in items])
 
-    @cached_property
+    #@cached_property
     def todo_items(self) -> list[TodoItem] | None:
         """Return the To-do items in the To-do list."""
         return self._attr_todo_items
