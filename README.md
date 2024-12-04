@@ -14,20 +14,9 @@ If you want to pull this integration, please follow these steps:
    ```bash
    git init
    ```
-2. Add the remote repository:
-   ```bash
-   git remote add automation_of_todo https://github.com/spooni01/HA-automation-of-todo
+2. Clone the repository:
    ```
-3. Pull the branch from the remote repository:
-   ```bash
-   git pull origin automation_of_todo
+   git clone git@github.com:spooni01/HA-automation-of-todo.git
    ```
 
-Example:
-```
-cd config
-git init
-git remote add automation_of_todo https://github.com/spooni01/HA-automation-of-todo
-git pull origin automation_of_todo
-```
 Now the integration should be available in your Home Assistent.

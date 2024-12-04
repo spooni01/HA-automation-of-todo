@@ -9,13 +9,13 @@ from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ConfigEntryNotReady
 from homeassistant.util import slugify
-from homeassistant.components.frontend import add_extra_js_url
 from homeassistant.components.frontend import async_register_built_in_panel
 from homeassistant.components.http import StaticPathConfig
 import os
 
 from .const import DOMAIN, PANEL_URL, PANEL_TITLE, CONF_STORAGE_KEY, CONF_TODO_LIST_NAME
 from .store import LocalTodoListStore
+from .rules import RulesManager
 
 PLATFORMS: list[Platform] = [Platform.TODO]
 
@@ -38,6 +38,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: LocalTodoConfigEntry) ->
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     
+    # rules_manager = RulesManager()
     await register_frontend(hass)
     await add_side_panel(hass)
 
