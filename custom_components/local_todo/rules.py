@@ -1,6 +1,11 @@
 """Rules handler for Local To-do integration."""
 
+import os
 import sqlite3
+
+from .const import CONF_DB_PATH
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 class RulesManager:
@@ -8,7 +13,7 @@ class RulesManager:
 
     def __init__(self):
         """Initialize database."""
-        self.conn = sqlite3.connect("local_todo.rules.db")
+        self.conn = sqlite3.connect(os.path.join(BASE_DIR, CONF_DB_PATH))
         self.cursor = self.conn.cursor()
 
         self.cursor.execute("""

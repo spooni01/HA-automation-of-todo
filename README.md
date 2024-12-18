@@ -18,5 +18,14 @@ If you want to pull this integration, please follow these steps:
    ```
    git clone git@github.com:spooni01/HA-automation-of-todo.git
    ```
+3. Add this code to your `configuration.yaml` file:
+   ```
+   panel_custom:
+      - name: local-todo-panel
+         url_path: local_todo
+         sidebar_title: Rules
+         sidebar_icon: mdi:checkbox-marked-circle
+         module_url: /local/local_todo.js
+    ```
 
 Now the integration should be available in your Home Assistent.
