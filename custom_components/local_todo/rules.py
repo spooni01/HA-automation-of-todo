@@ -5,15 +5,13 @@ import sqlite3
 
 from .const import CONF_DB_PATH
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-
 
 class RulesManager:
     """Rules manager for a Local To-do integration."""
 
-    def __init__(self):
+    def __init__(self, config_path):
         """Initialize database."""
-        self.conn = sqlite3.connect(os.path.join(BASE_DIR, CONF_DB_PATH))
+        self.conn = sqlite3.connect(os.path.join(config_path, CONF_DB_PATH))
         self.cursor = self.conn.cursor()
 
         self.cursor.execute("""
